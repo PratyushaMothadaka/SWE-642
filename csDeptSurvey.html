@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMU CS Department Survey</title>
+    <!-- Bootstrap CSS for styling and design -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body {
+            background-color: #f4f7fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .cs-header {
+            background-color: #006633; 
+            color: #FFCC33; 
+            padding: 20px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .cs-header h1 {
+            width: 5px;
+        }
+
+        .cs-header img {
+            width: 200px; 
+            margin-right: 15px;
+        }
+
+        .cs-box {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            padding: 20px;
+            transition: transform 0.2s;
+        }
+
+        .cs-footer {
+            background-color: #006633; 
+            color: #ffffff;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .required-field::after {
+            content: "*";
+            color: red;
+        }
+
+        .btn-gmu {
+            background-color: #006633;
+            color: #FFCC33;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn-gmu:hover{
+            background-color: #ffffff; /* Background color on hover */
+            border: 2px solid #006633; /* Change to your desired color on hover */
+            color: #006633; /* Optional: Change text color on hover */
+        }
+
+
+        @media (max-width: 768px) {
+            .cs-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .cs-header img {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cs-header"> 
+        <img src="mason-logo.png" alt="GMU Logo">
+        <h1 style="font-weight: bold;"> Department of Computer Science Survey</h1>
+    </div>
+
+    <div class="container mt-4">
+        <div class="cs-box">
+            <form autocomplete="on">
+                <div class="form-group">
+                    <label for="username" class="required-field">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required autofocus>
+                </div>
+    
+                <div class="form-group">
+                    <label for="address" class="required-field">Street Address</label>
+                    <input type="text" class="form-control" id="address" name="address" placeholder="Enter your street address" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="city" class="required-field">City</label>
+                    <input type="text" class="form-control" id="city" name="city" placeholder="Enter your city" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="state" class="required-field">State</label>
+                    <input type="text" class="form-control" id="state" name="state" placeholder="Enter your state" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="zip" class="required-field">ZIP Code</label>
+                    <input type="text" class="form-control" id="zip" name="zip" placeholder="Enter your ZIP code" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="telephone" class="required-field">Telephone Number</label>
+                    <input type="tel" class="form-control" id="telephone" name="telephone" placeholder="123-456-7890" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="email" class="required-field">E-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="url" class="required-field">URL</label>
+                    <input type="url" class="form-control" id="url" name="url" placeholder="https://example.com" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="date" class="required-field">Date of Survey</label>
+                    <input type="date" class="form-control" id="date" name="date" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="graduation-month" class="required-field">High School Graduation Month</label>
+                    <input list="months" class="form-control" id="graduation-month" name="graduation-month" required>
+                    <datalist id="months">
+                        <option value="January">
+                        <option value="February">
+                        <option value="March">
+                        <option value="April">
+                        <option value="May">
+                        <option value="June">
+                        <option value="July">
+                        <option value="August">
+                        <option value="September">
+                        <option value="October">
+                        <option value="November">
+                        <option value="December">
+                    </datalist>
+                </div>
+    
+                <div class="form-group">
+                    <label for="graduation-year" class="required-field">High School Graduation Year</label>
+                    <input type="number" class="form-control" id="graduation-year" name="graduation-year" placeholder="YYYY" required>
+                </div>
+    
+                <fieldset class="form-group">
+                    <legend class="required-field">What did you like most about the campus?</legend>
+                    <div>
+                        <input type="checkbox" id="students" name="likes" value="Students">
+                        <label for="students">Students</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="location" name="likes" value="Location">
+                        <label for="location">Location</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="campus" name="likes" value="Campus">
+                        <label for="campus">Campus</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="atmosphere" name="likes" value="Atmosphere">
+                        <label for="atmosphere">Atmosphere</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="dorms" name="likes" value="Dorm Rooms">
+                        <label for="dorms">Dorm Rooms</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="sports" name="likes" value="Sports">
+                        <label for="sports">Sports</label>
+                    </div>
+                </fieldset>
+    
+                <fieldset class="form-group">
+                    <legend class="required-field">How did you become interested in the university?</legend>
+                    <div>
+                        <input type="radio" id="friends" name="interest" value="Friends" required>
+                        <label for="friends">Friends</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="television" name="interest" value="Television">
+                        <label for="television">Television</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="internet" name="interest" value="Internet">
+                        <label for="internet">Internet</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="other" name="interest" value="Other">
+                        <label for="other">Other</label>
+                    </div>
+                </fieldset>
+    
+                <div class="form-group">
+                    <label for="comments">Additional Comments</label>
+                    <textarea class="form-control" id="comments" name="comments" rows="4" placeholder="Enter your comments here..."></textarea>
+                </div>
+    
+                <div class="form-group">
+                    <label for="recommendation" class="required-field">Likelihood of recommending this school to other prospective students</label>
+                    <select class="form-control" id="recommendation" name="recommendation" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="Very Likely">Very Likely</option>
+                        <option value="Likely">Likely</option>
+                        <option value="Unlikely">Unlikely</option>
+                    </select>
+                </div>
+    
+                <div class="text-center">
+                    <button type="submit" class="btn btn-gmu"><i class="fas fa-paper-plane"></i> Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="container text-center mt-4 mb-4" >
+        <a href="csDept.html" class="btn btn-gmu">CS Department Page</a>
+        <a href="index.html" class="btn btn-gmu">Home Page</a>
+    </div>
+
+   <div>
+    <footer class="cs-footer">
+        <p>&copy; 2024 George Mason University. All rights reserved.</p>
+    </footer>
+   </div>
+
+    <!-- Bootstrap JS for functionality -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.11/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

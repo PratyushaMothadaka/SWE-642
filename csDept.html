@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science, GMU</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f7fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .cs-header {
+            background-color: #006633; 
+            color: #FFCC33;
+            padding: 20px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .cs-header h1 {
+            width: 5px;
+            overflow: hidden;
+            white-space: nowrap; 
+}
+
+        .cs-header img {
+            width: 200px; 
+            margin-right: 15px;
+        }
+
+        .cs-box {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            padding: 20px;
+            transition: transform 0.2s;
+        }
+
+        .cs-box:hover {
+            transform: scale(1.02);
+        }
+
+        .cs-box h3 {
+            color: #006633; 
+            background-color: #FFCC33; 
+            border:2px solid #006633;
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .cs-footer {
+            background-color: #004D40; 
+            color: #ffffff;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .cs-button {
+            color: #ffffff; 
+            padding: 12px 25px; 
+            border-radius: 5px; 
+            text-decoration: none;
+            font-weight: bold; 
+            margin: 10px; 
+            display: inline-block; 
+            transition: background-color 0.3s;
+        }
+
+        .cs-button-survey {
+            background-color: #006633; 
+        }
+        .cs-button-survey:hover{
+            background-color: #ffffff; /* Background color on hover */
+            border: 2px solid #006633; /* Change to your desired color on hover */
+            color: #006633; /* Optional: Change text color on hover */
+        }
+
+        .cs-button-home {
+            background-color: #FFCC33; 
+            color: #006633;  
+        }
+        .cs-button-home:hover{
+            background-color: #ffffff; /* Background color on hover */
+            border: 2px solid #FFCC33; /* Change to your desired color on hover */
+            color: #FFCC33; /* Optional: Change text color on hover */
+        }
+
+        .cs-button:hover {
+            opacity: 0.9; 
+        }
+
+        @media (max-width: 768px) {
+            .cs-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .cs-header img {
+                margin-bottom: 10px;
+            }
+        }
+        .table-bordered th, .table-bordered td {
+            border: 2px solid #006633; /* GMU Green border */
+        }   
+
+        .table-hover tbody tr:hover {
+            background-color: #FFCC33; /* GMU Yellow on hover */
+            color: #006633; /* GMU Green text color on hover */
+        }
+
+        .table-hover tbody tr:hover td {
+            background-color: #FFCC33; /* GMU Yellow on hover for cells */
+            color: #006633; /* GMU Green text color on hover for cells */
+        }
+        .thead-light th {
+            border: 2px solid #006633; /* GMU Green border */
+            background-color: #FFCC33; /* GMU Yellow header background */
+            color: #006633; /* GMU Green text color */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cs-header d-flex align-items-center"> 
+        <img src="mason-logo.png" alt="GMU Logo">
+        <p style="font-size: 70px; font-weight: bold;"> Department of Computer Science</p>
+    </div>
+
+    <div class="container mt-4">
+        <div class="cs-box">
+            <h3>About the Department</h3>
+            <p>The Computer Science Department at George Mason University (GMU) is renowned for its comprehensive range of undergraduate and graduate programs, including Bachelor's, Master's, and PhD degrees in Computer Science and related fields. With a strong emphasis on inclusivity and diversity, the department aims to foster a collaborative learning environment that encourages innovation and creativity.
+
+                The faculty consists of distinguished researchers and educators who are committed to excellence in teaching and mentorship. The department offers cutting-edge curriculum focusing on critical areas such as software engineering, information systems, cybersecurity, and artificial intelligence.
+                
+                In addition to academic programs, the CS Department at GMU actively promotes industry collaboration through partnerships with local tech companies and organizations, providing students with valuable real-world experience and networking opportunities. With a commitment to "Computing for All," the department strives to increase representation in computing and welcomes students from diverse backgrounds to explore the dynamic field of computer science.</p>
+        </div>
+
+        <div class="cs-box">
+            <h3>Programs</h3>
+            <ul>
+                <li>BS, MS, and PhD in Computer Science</li>
+                <li>MS in Software Engineering</li>
+                <li>MS in Information Systems</li>
+                <li>MS in Information Security and Assurance</li>
+                <li>BS in Applied Computer Science (Various Concentrations)</li>
+            </ul>
+        </div>
+            <div class="cs-box">
+                <h3>Key Courses</h3>
+                <table class="table table-bordered table-hover">
+                    <thead class="thead-light">
+                        <tr>
+                            <th style="border: #006633;">Course Code</th>
+                            <th style="border:#006633">Course Title</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CS 550</td>
+                            <td>Database Systems</td>
+                        </tr>
+                        <tr>
+                            <td>CS 530</td>
+                            <td>Mathematical Foundations in Computer Science</td>
+                        </tr>
+                        <tr>
+                            <td>CS 531</td>
+                            <td>Fundamentals for Computer Science</td>
+                        </tr>
+                        <tr>
+                            <td>CS 583</td>
+                            <td>Analysis of Algorithms</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        
+        <!-- Buttons -->
+        <div class="text-center">
+            <a href="csDeptSurvey.html" class="cs-button cs-button-survey">Take Survey</a>
+            <a href="index.html" class="cs-button cs-button-home">Go to Home Page</a>
+        </div>
+    </div>
+
+    <div class="cs-footer"> <!-- footer -->
+        &copy; 2023 George Mason University | Department of Computer Science
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
